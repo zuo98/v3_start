@@ -1,0 +1,248 @@
+/* 为了不破坏iview原有样式 
+所有涉及到原有组件样式修改 统一添加use-theme自定义属性 */
+
+/* modal -- start -- */
+.v-transfer-dom[use-theme] .ivu-modal-content {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.v-transfer-dom[use-theme] .ivu-modal-header {
+    padding: 14px 30px;
+    background: var(--primary-color, #0094ff);
+}
+
+.v-transfer-dom[use-theme] .ivu-modal-header .ivu-modal-header-inner {
+    color: white;
+}
+
+.v-transfer-dom[use-theme] .ivu-modal-close {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 16px;
+    right: 15px;
+    background: white;
+    border-radius: 50%;
+}
+
+.v-transfer-dom[use-theme] .ivu-modal-close .ivu-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 0;
+    transform: translate(-50%, -50%);
+}
+
+.v-transfer-dom[use-theme] .ivu-modal-close .ivu-icon::before {
+    content: "\F379";
+    font-size: 16px;
+    font-weight: 900;
+    color: var(--primary-color, #0094ff);
+}
+
+.v-transfer-dom[use-theme] .ivu-modal-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.v-transfer-dom[use-theme] .ivu-modal-footer button {
+    height: 36px;
+    padding: 0 20px;
+}
+
+/* modal -- end -- */
+
+
+/* page -- start -- */
+.ivu-page[use-theme] {
+    display: flex;
+    align-items: center;
+}
+
+.ivu-page[use-theme] .ivu-page-total {
+    order: 1;
+    color: rgba(0, 0, 0, 0.85);
+}
+
+.ivu-page[use-theme] .ivu-page-options {
+    order: 2;
+}
+
+.ivu-page[use-theme] .ivu-page-options .ivu-select-selection {
+    background: var(--base-background-color, #f5f7fb);
+}
+
+.ivu-page[use-theme] .ivu-page-item,
+.ivu-page[use-theme] .ivu-page-prev,
+.ivu-page[use-theme] .ivu-page-next {
+    order: 3;
+    transition: background 0.3s;
+    background: var(--base-background-color, #f5f7fb);
+}
+
+
+.ivu-page[use-theme] .ivu-page-item a,
+.ivu-page[use-theme] .ivu-page-prev i,
+.ivu-page[use-theme] .ivu-page-next i {
+    color: rgba(0, 0, 0, 0.65);
+    transition: color 0.3s;
+}
+
+.ivu-page[use-theme] .ivu-page-item.ivu-page-item-active {
+    background: var(--primary-color, #0094ff);
+}
+
+.ivu-page[use-theme] .ivu-page-item.ivu-page-item-active a {
+    color: white;
+}
+
+/* page -- end -- */
+
+/* btn -- start --*/
+.ivu-btn[use-theme] {
+    width: 108px;
+    height: 36px;
+    padding: 0 0;
+    border: 1px solid #0094ff;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    text-align: center;
+    color: #0094ff;
+    line-height: 22px;
+}
+
+/* btn -- end --*/
+
+/* table -- start --- */
+
+.ivu-table-wrapper[use-theme] .ivu-table-header thead tr th {
+    padding: 13px 0;
+}
+
+.ivu-table-wrapper[use-theme] .ivu-table-header thead tr th {
+    padding: 13px 0;
+}
+/* table -- end --- */
+
+
+/* tabs --- start --- */
+.ivu-tabs[use-theme] .ivu-tabs-tab {
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 500;
+    padding: 9px 47px;
+}
+
+.ivu-tabs[use-theme] .ivu-tabs-bar {
+    margin-bottom: 0;
+    border-bottom-width: 2px;
+}
+
+.ivu-tabs[use-theme] .ivu-tabs-ink-bar  {
+    height: 3px;
+}
+/* tabs --- end --- */
+
+
+.card {
+    @apply rounded-xl bg-[#fff];
+}
+
+.text-hidden {
+    @apply text-ellipsis overflow-hidden whitespace-nowrap;
+}
+
+.subtitle {
+    position: relative;
+    ;
+    padding: 3px 1px 4px 15px;
+    font-weight: 500;
+    color: var(--color, var(--primary-color));
+    line-height: var(--line-height, 25px);
+    font-size: var(--font-size, 18px);
+    background: linear-gradient(to right, var(--color, var(--primary-color)) -400%, transparent);
+}
+
+.subtitle::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    left: 0;
+    top: 7px;
+    bottom: 7px;
+    background: var(--color, var(--primary-color));
+}
+
+.grid-box {
+    background: linear-gradient(-45deg,
+            rgba(255, 255, 255, var(--grid-opacity, 0.3)) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, var(--grid-opacity, 0.3)) 50%,
+            rgba(255, 255, 255, var(--grid-opacity, 0.3)) 75%,
+            transparent 75%,
+            transparent) repeat left top / var(--grid-size, 11px) var(--grid-size, 11px),
+        var(--cover-bg, transparent);
+}
+
+.pie-chart-with-ring {
+    position: relative;
+    overflow: hidden;
+}
+
+.pie-chart-with-ring .chart-box {
+    z-index: 1;
+}
+
+.pie-chart-with-ring::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url("../assets/imgs/pie-chart-bg.png") no-repeat center / 152px;
+    animation: rotate 16s linear infinite;
+}
+
+
+.hover-text-button {
+    cursor: pointer;
+    user-select: none;
+    color: var(--primary-color);
+    transition-property: background color;
+    transition-duration: 0.3s;
+    transition-delay: 0.1s;
+    padding: var(--padding, 3px 10px);
+    border-radius: var(--border-radius, 13px);
+    background: transparent;
+    text-align: center;
+    display: inline-block;
+}
+
+
+.hover-text-button:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
