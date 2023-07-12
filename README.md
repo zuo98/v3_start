@@ -1,6 +1,6 @@
-# sws_index
+# v3_start
 
-This template should help get you started developing with Vue 3 in Vite.
+Front-end project initialization structure([vue3](https://cn.vuejs.org/)+[vite](https://cn.vitejs.dev/)+[tailwind](https://www.tailwindcss.cn/)+[element](https://element-plus.org))
 
 ## Recommended IDE Setup
 
